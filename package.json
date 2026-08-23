@@ -1,0 +1,26 @@
+{
+  "name": "lepto",
+  "version": "0.1.0",
+  "description": "Bright-gray terminal launcher for authorized security testing — wraps nmap, hydra and hping3 behind one menu.",
+  "bin": {
+    "lepto": "lepto.js"
+  },
+  "main": "lepto.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node lepto.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [
+    "security",
+    "pentest",
+    "nmap",
+    "hydra",
+    "hping3",
+    "cli",
+    "toolkit"
+  ],
+  "license": "MIT"
+}
