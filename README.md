@@ -31,15 +31,41 @@ continue.
 - [Node.js](https://nodejs.org) 16 or newer (no npm dependencies — pure stdlib).
 - The tools you want to drive, installed and on your `PATH`:
 
-| Module | Binary   | What it does                                            |
-| ------ | -------- | ------------------------------------------------------- |
-| Nmap   | `nmap`   | Host discovery, port and service/version scanning       |
-| Hydra  | `hydra`  | Online login brute-forcing (ssh, ftp, http, smb, …)     |
-| Hping3 | `hping3` | Custom TCP/IP packet probes, port checks, traceroute     |
+| Module | Binary   | What it does                                        | Get it |
+| ------ | -------- | --------------------------------------------------- | ------ |
+| Nmap   | `nmap`   | Host discovery, port and service/version scanning   | [nmap.org/download](https://nmap.org/download.html) |
+| Hydra  | `hydra`  | Online login brute-forcing (ssh, ftp, http, smb, …) | [github.com/vanhauser-thc/thc-hydra](https://github.com/vanhauser-thc/thc-hydra) |
+| Hping3 | `hping3` | Custom TCP/IP packet probes, port checks, traceroute | [hping.org](http://www.hping.org/) · [source](https://github.com/antirez/hping) |
 
 Lepto detects which are present (`Tool status` in the menu) and prints an
 install hint for anything missing. hydra and hping3 are Linux-first — on
 Windows, run Lepto inside **WSL / Kali**.
+
+### Install the tools
+
+**Debian / Ubuntu / Kali (incl. WSL)**
+
+```bash
+sudo apt update && sudo apt install nmap hydra hping3
+```
+
+**Arch**
+
+```bash
+sudo pacman -S nmap hydra hping
+```
+
+**macOS (Homebrew)**
+
+```bash
+brew install nmap hydra
+# hping3 has no official brew formula — build from source: https://github.com/antirez/hping
+```
+
+**Windows**
+
+- Nmap installs natively: `winget install Insecure.Nmap` (or the [nmap.org installer](https://nmap.org/download.html)).
+- hydra and hping3 aren't native to Windows — install [WSL](https://learn.microsoft.com/windows/wsl/install) (or [Kali](https://www.kali.org/get-kali/)) and use the Debian commands above.
 
 ## Install
 
